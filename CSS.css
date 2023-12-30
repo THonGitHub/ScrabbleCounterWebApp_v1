@@ -1,0 +1,110 @@
+﻿/*CSS kód pre obrázok na popredí s nastavovaním priehľadnosti*/
+
+/*.container {
+    position: relative;
+}
+
+    .container::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('/Pictures/scrabble.jpg');
+        background-size: cover;
+        opacity: 0.1;*/ /* Adjust the value to make it more or less transparent */
+    /*}*/
+
+/* Additional styles for the actual content in the container */
+/*.content {
+    position: relative;
+    z-index: 1;
+}*/
+
+./*container {
+    background-image: url('/Pictures/scrabble.jpg');
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    height: 600px;*/ /* Set the height as needed */
+    /*color: white;*/ /* Set text color to be visible against the background */
+
+/*}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.1);*/ /* Adjust the last value (0.5) for opacity */
+    /*position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}*/
+
+/* Additional styles for the actual content in the container */
+/*.content {
+    position: relative;
+    z-index: 2;
+}*/
+
+
+/* Example for making buttons partially transparent */
+/*.btn-transparent {
+    background-color: rgba(0, 123, 255, 0.9);*/ /* Adjust the last value (0.5) for opacity */
+    /*border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+}*/
+    /* Style for the overlay background */
+    .overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 999;
+    }
+
+    /* Style for the login box */
+    .login-box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+
+/* štýly pre dark-mode tabuľky s preiebehom hry*/
+.dark-mode {
+    background-color: #333; /* Dark background color */
+    color: #fff; /* Light text color */
+}
+
+    .dark-mode th,
+    .dark-mode td {
+        color: #fff; /* White text color for table headers and cells */
+    }
+
+    .dark-mode th {
+        background-color: #555; /* Darker background for table headers */
+    }
+
+    .dark-mode td {
+        background-color: #444; /* Darker background for table cells */
+    }
+
+ 
