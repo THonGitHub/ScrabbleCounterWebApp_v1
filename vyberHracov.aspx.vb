@@ -43,7 +43,7 @@ Public Class vyberHracov
         End If
 
         Dim dt_read_players As New DataTable
-        Dim connectionString As String = "insert connection string here"
+        Dim connectionString As String = "Server=deframydbd01.intl.att.com,3306;Database=TSI_ASSET_AUTOMATION;UID=TSI_ASSET_AUTOMATION;pwd=!TSI_Asset_Auto-01"
         Dim query As String = "SELECT * FROM GameCounter_players;"
 
         Using con As New MySqlConnection(connectionString)

@@ -1,9 +1,7 @@
 ﻿Imports MySql.Data.MySqlClient
-''' <summary>
 ''' Po spustení aplikácie sa v prehliadači zobrazí úvodná stránka default.aspx.
 ''' Do nej sa z DB tabuľky GameCounter_results načítajú a zobrazia výsledky z predošlej hry.
 ''' Stlačením tlačítka s menom hráča, ktorý začína hru, sa zobrazí stránka competition.aspx.
-''' </summary>
 Public Class _default
     Inherits System.Web.UI.Page
 
@@ -19,12 +17,8 @@ Public Class _default
     Public Drzitel_rekordu_za_slovo As String
     Public Rekord_body_za_hru_elzi As Integer
     Public Rekord_body_za_hru_tomas As Integer
-    Public connectionString As String = "insert connection string here"
+    Public connectionString As String = ""
 
-    ''' <summary>
-    ''' </summary>
-    ''' <param name="sender"></param>
-    ''' <param name="e"></param>
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 
         'vymazať obsah DB tabuľky "Priebeh hry", aby sa do nej mohol začať zapisovať priebeh nasledujúcej hry
@@ -188,9 +182,7 @@ Public Class _default
 
     End Sub
 
-    ''' <summary>
     ''' vymazanie obsahu tabuľky
-    ''' </summary>
     ''' <param name="meno_tabulky"></param>
     Public Sub TruncateMySQLTable(meno_tabulky As String)
         Using connection As New MySqlConnection(connectionString)
@@ -203,7 +195,6 @@ Public Class _default
                     command.ExecuteNonQuery()
                     Label_1sprava.Text = "Tabuľka ""Priebeh hry"" bola úspešne vyprázdnená"
                     Label_1sprava.Visible = False
-
                 Catch ex As Exception
                     Label_1sprava.Text = "Chyba pri vyprázdňovaní tabuľky ""Priebeh hry""."
                     Label_1sprava.Visible = True
@@ -219,8 +210,6 @@ Public Class _default
     ''' na ktorej sa zvolené meno zobrazí v poliach: "Hráč na ťahu:" a "Túto hru začal:"
     ''' Na stránke competition.aspx sú už potom tieto tlačítka inaktívne.
     ''' </summary>
-    ''' <param name="sender"></param>
-    ''' <param name="e"></param>
     Protected Sub Button_tomas_loads_competition_page_Click(sender As Object, e As EventArgs)
 
         'otestovať, či bolo zvolené "testovanie" alebo "hra"
@@ -249,9 +238,6 @@ Public Class _default
     ''' RadioButtonList na voľbu "testovanie" alebo "hra".
     ''' Tejto voľbe sa potom použije príslušné "query"
     ''' </summary>
-    ''' <param name="sender"></param>
-    ''' <param name="e"></param>
-    ''' <returns></returns>
     Protected Function RadioButtonList1_SelectedIndexChanged(sender As Object, e As EventArgs) As Boolean
         If RadioButtonList1.SelectedValue = "1" Then
             Session("tabulka") = "test"

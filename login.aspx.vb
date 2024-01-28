@@ -23,7 +23,7 @@ Partial Class Login
 
     ' Implement this method to validate user credentials
     Private Function ValidateUser(email As String, password As String) As Boolean
-        Dim connectionString As String = "insert connection string here"
+        Dim connectionString As String = "Server=deframydbd01.intl.att.com,3306;Database=TSI_ASSET_AUTOMATION;UID=TSI_ASSET_AUTOMATION;pwd=!TSI_Asset_Auto-01"
         Dim query As String = "SELECT id, PasswordHash FROM GameCounter_players_test WHERE Email = @email"
         Dim storedPasswordHash As String
 

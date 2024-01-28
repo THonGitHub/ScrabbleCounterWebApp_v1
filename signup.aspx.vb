@@ -31,7 +31,7 @@ Public Class Signup
 
         ' Hash the password (you should use a proper password hashing algorithm)
         Dim passwordHash As String = YourPasswordHashingFunction(password)
-        Dim connectionString As String = "insert connection string here"
+        Dim connectionString As String = "Server=deframydbd01.intl.att.com,3306;Database=TSI_ASSET_AUTOMATION;UID=TSI_ASSET_AUTOMATION;pwd=!TSI_Asset_Auto-01"
         Dim query As String = "INSERT INTO GameCounter_players (
             date_time,
             players,

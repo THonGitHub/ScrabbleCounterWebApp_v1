@@ -309,7 +309,7 @@ Public Class competition
     ''' <param name="Tomas_wins_cumul"></param>
     Public Sub Zapis_do_tabulky_GameCounter_results(Elzi_points_for_game As Integer, Tomas_points_for_game As Integer, Elzi_wins_cumul As Integer, Tomas_wins_cumul As Integer, Rekord_body_za_slovo As Integer, Drzitel_Rekordu_za_slovo As String, Body_pocas_hry As String)
 
-        Dim connectionString As String = "insert connection string here"
+        Dim connectionString As String = "Server=deframydbd01.intl.att.com,3306;Database=TSI_ASSET_AUTOMATION;UID=TSI_ASSET_AUTOMATION;pwd=!TSI_Asset_Auto-01"
 
         'vyberie sa tabuľka na zapísanie výsledkov hry podľa toho, či sa zvolilo na stránke default.aspx "testovanie" alebo "hra"
         If Session("tabulka") = "test" Then
@@ -369,7 +369,7 @@ Public Class competition
     End Sub
 
     Public Sub Zapis_do_tabulky_priebeh_hry(body_za_slovo_elzi As Integer, body_za_slovo_tomas As Integer, body_spolu_elzi As Integer, body_spolu_tomas As Integer)
-        Dim connectionString As String = "insert connection string here"
+        Dim connectionString As String = "Server=deframydbd01.intl.att.com,3306;Database=TSI_ASSET_AUTOMATION;UID=TSI_ASSET_AUTOMATION;pwd=!TSI_Asset_Auto-01"
         query = "INSERT INTO Priebeh_hry (
                                         date_time,
                                         body_za_slovo_elzi,
